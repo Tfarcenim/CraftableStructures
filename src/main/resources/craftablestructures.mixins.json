@@ -1,12 +1,13 @@
 {
   "required": true,
-  "package": "com.example.examplemod.mixin",
+  "package": "tfar.craftablestructures.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "examplemod.refmap.json",
+  "refmap": "craftablestructures.refmap.json",
   "mixins": [
+    "ChunkMixin",
+    "StructureAccess"
   ],
-  "client":[
-    "ExampleMixin"
+  "client": [
   ],
   "injectors": {
     "defaultRequire": 1
