@@ -44,7 +44,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                craftablestructures {
                     source sourceSets.main
                 }
             }
@@ -60,12 +60,28 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod {
+                craftablestructures {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+            //property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+            args '--mod', 'craftablestructures', '--all', '--output', file('src/generated/resources/'), '--existing', sourceSets.main.resources.srcDirs[0]
+            mods {
+                craftablestructures {
                     source sourceSets.main
                 }
             }
         }
     }
+}
+
+sourceSets {
+    main.resources.srcDirs += 'src/generated/resources'
 }
 
 repositories{

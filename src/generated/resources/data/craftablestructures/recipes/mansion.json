@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "craftablestructures",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:dark_oak_log"
+    },
+    "b": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "craftablestructures:mini_structure",
+    "nbt": "{configured_structure_feature:\"minecraft:mansion\"}"
+  }
+}

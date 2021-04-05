@@ -84,6 +84,9 @@ public class StructureItem  <C extends IFeatureConfig> extends Item{
 
             }
             player.getCooldownTracker().setCooldown(this,20);
+            if (!player.abilities.isCreativeMode) {
+                stack.shrink(1);
+            }
         }
         return super.onItemUse(context);
     }
@@ -102,13 +105,15 @@ public class StructureItem  <C extends IFeatureConfig> extends Item{
     @Override
     public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
         super.fillItemGroup(group, items);
-        for (StructureFeature<?,?> structureFeature : WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE) {
-            ItemStack stack = new ItemStack(this);
-            ResourceLocation rl = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE.getKey(structureFeature);
-            CompoundNBT nbt = new CompoundNBT();
-            nbt.putString("configured_structure_feature",rl.toString());
-            stack.setTag(nbt);
-            items.add(stack);
+        if (this.isInGroup(group)) {
+            for (StructureFeature<?,?> structureFeature : WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE) {
+                ItemStack stack = new ItemStack(this);
+                ResourceLocation rl = WorldGenRegistries.CONFIGURED_STRUCTURE_FEATURE.getKey(structureFeature);
+                CompoundNBT nbt = new CompoundNBT();
+                nbt.putString("configured_structure_feature", rl.toString());
+                stack.setTag(nbt);
+                items.add(stack);
+            }
         }
     }
 

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "craftablestructures:swamp_hut"
+    ]
+  },
+  "criteria": {
+    "has_cobble": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:cobblestone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "craftablestructures:swamp_hut"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cobble",
+      "has_the_recipe"
+    ]
+  ]
+}

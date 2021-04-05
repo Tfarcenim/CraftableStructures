@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "craftablestructures",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:nether_bricks"
+    },
+    "b": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "result": {
+    "item": "craftablestructures:mini_structure",
+    "nbt": "{configured_structure_feature:\"minecraft:fortress\"}"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "craftablestructures",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:obsidian"
+    },
+    "b": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "result": {
+    "item": "craftablestructures:mini_structure",
+    "nbt": "{configured_structure_feature:\"minecraft:ruined_portal\"}"
+  }
+}

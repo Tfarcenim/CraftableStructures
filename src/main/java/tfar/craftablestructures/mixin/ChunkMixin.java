@@ -12,6 +12,8 @@ public class ChunkMixin {
     private Object fixHeightmap(Object old) {
         if (old == Heightmap.Type.OCEAN_FLOOR_WG) {
             return Heightmap.Type.OCEAN_FLOOR;
+        } else if (old == Heightmap.Type.WORLD_SURFACE_WG) {
+            return Heightmap.Type.WORLD_SURFACE;
         }
         return old;
     }
